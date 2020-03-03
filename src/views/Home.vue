@@ -1,33 +1,38 @@
 <template>
-  <div>
-    <el-container>
-      <el-main class="profile">
-        <el-card class="profile__card">
-          <div class="profile__top">
-            <img
-              src="@/assets/handsome_grandson.jpg"
-              class="profile__top-image"
-            />
-          </div>
-          <div class="profile__details">
-            <div class="profile__details-name profile__details-item">
-              Rost Myshkin
-            </div>
-            <div class="profile__details-profession profile__details-item">
-              Full-Stack Developer
-            </div>
-            <div class="profile__details-location profile__details-item">
-              Vancouver, BC
-              <i
-                class="em em-flag-ca profile__details-location--icon"
-                aria-role="presentation"
-                aria-label="Canada Flag"
-              ></i>
-            </div>
-          </div>
-        </el-card>
-      </el-main>
-    </el-container>
+  <div class="profile">
+    <div class="profile__title">
+      Rost <span class="profile__title--last">Myshkin</span>
+    </div>
+    <div class="profile__details">
+      <p>
+        Hi! My name is
+        <span class="profile__details-name">Rost</span> and I am a Full-Stack
+        Developer from Vancouver, BC
+        <i
+          class="em em-flag-ca profile__details-location--icon"
+          aria-role="presentation"
+          aria-label="Canada Flag"
+        ></i
+        >. I am a graduate of British Columbia Institute of Technology with a
+        Diploma of Computer System Technlogy. I design and build websites. You
+        can find me on
+        <span class="profile__details--linkedin"
+          ><a href="https://www.linkedin.com/in/rostmyshkin/">LinkedIn</a></span
+        >.
+      </p>
+
+      <p>
+        Do you need help on a project and want to get in touch?
+        <span class="profile__details--contact"
+          ><a href="mailto: rostmyshkin@gmail.com">Contact Me</a></span
+        >.
+        <i
+          class="em em-rocket profile__details-location--icon"
+          aria-role="presentation"
+          aria-label="Canada Flag"
+        ></i>
+      </p>
+    </div>
   </div>
 </template>
 
@@ -39,33 +44,32 @@ export default class Home extends Vue {}
 
 <style lang="scss">
 .profile {
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 
-  &__top {
-    margin-top: 1rem;
+  &__title {
+    font-size: 3rem;
+    text-transform: uppercase;
 
-    &-image {
-      width: 16rem;
-      height: 16rem;
-      object-fit: cover;
-      border-radius: 50%;
-      box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.7);
+    &--last {
+      font-weight: bold;
+      color: #9c3131;
     }
-  }
-  &__card {
-    width: 50%;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
   }
   &__details {
-    margin: 1rem;
-
-    &-name {
-      color: #4a4e69;
-      font-size: 2rem;
-    }
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: justify;
 
     &-profession {
       color: #6e7080;
@@ -85,13 +89,22 @@ export default class Home extends Vue {}
       }
     }
 
+    &--linkedin {
+      color: #6082f3;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    &--contact {
+      color: #4ec34a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
     &-item {
       font-weight: 300;
       margin-bottom: 1rem;
     }
   }
-}
-.projects {
-  background-color: #cccccc;
 }
 </style>
