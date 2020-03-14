@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: "/rostmyshkin.github.io/"
+  publicPath: "/rm"
 };
