@@ -1,0 +1,4 @@
+[submodule "dist/rostmyshkin.github.io"]
+	path = dist/rostmyshkin.github.io
+	url = https://github.com/rostgoat/rostmyshkin.github.io.git
+	branch = master
