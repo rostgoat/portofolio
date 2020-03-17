@@ -1,10 +1,9 @@
-import express, { static } from "express";
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const express = require("express");
 const port = process.env.PORT || 8080;
 const app = express();
 
-app.use(static(__dirname + "/dist/"));
-
-// reroutes user back to index when URI is changed
+app.use(express.static(__dirname + "/dist/"));
 app.get(/.*/, function(req, res) {
   res.sendfile(__dirname + "/dist/index.html");
 });
