@@ -1,50 +1,61 @@
 <template>
-  <div class="profile">
-    <div class="profile__title">
-      Rost <span class="profile__title--last">Myshkin</span>
-    </div>
-    <div class="profile__details">
-      <p>
-        Hi! My name is
-        <span class="profile__details-name">Rost</span> and I am a Full-Stack
-        Developer from Vancouver, BC
-        <i
-          class="em em-flag-ca profile__details-location--icon"
-          aria-role="presentation"
-          aria-label="Canada Flag"
-        ></i
-        >. I am a graduate of British Columbia Institute of Technology with a
-        Diploma of Computer System Technlogy. I design and build websites. You
-        can find me on
-        <span class="profile__details--linkedin"
-          ><a href="https://www.linkedin.com/in/rostmyshkin/">LinkedIn</a></span
-        >.
-      </p>
+  <div class="application">
+    <header class="profile">
+      <div class="profile__title">
+        Rost <span class="profile__title--last">Myshkin</span>
+      </div>
+      <div class="profile__details">
+        <p>
+          Hi! My name is
+          <span class="profile__details-name">Rost</span> and I am a Full-Stack
+          Developer from Vancouver, BC
+          <i
+            class="em em-flag-ca profile__details-location--icon"
+            aria-role="presentation"
+            aria-label="Canada Flag"
+          ></i
+          >. I am a graduate of British Columbia Institute of Technology with a
+          Diploma of Computer System Technlogy. I design and build websites. You
+          can find me on
+          <span class="profile__details--linkedin"
+            ><a href="https://www.linkedin.com/in/rostmyshkin/"
+              >LinkedIn</a
+            ></span
+          >.
+        </p>
 
-      <p>
-        Do you need help on a project and want to get in touch?
-        <span class="profile__details--contact"
-          ><a href="mailto: rostmyshkin@gmail.com">Contact Me</a></span
-        >.
-        <i
-          class="em em-rocket profile__details-location--icon"
-          aria-role="presentation"
-          aria-label="Canada Flag"
-        ></i>
-      </p>
-    </div>
+        <p>
+          Do you need help on a project and want to get in touch?
+          <span class="profile__details--contact"
+            ><a href="mailto: rostmyshkin@gmail.com">Contact Me</a></span
+          >.
+          <i
+            class="em em-rocket profile__details-location--icon"
+            aria-role="presentation"
+            aria-label="Canada Flag"
+          ></i>
+        </p>
+      </div>
+    </header>
+    <main>
+      <section class="projects"></section>
+    </main>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import Vue from "vue";
 
 export default class Home extends Vue {}
 </script>
 
 <style lang="scss">
+.application {
+  height: 100vh;
+}
+
 .profile {
-  width: 70%;
+  height: 95vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,6 +66,16 @@ export default class Home extends Vue {}
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
+
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.1),
+      rgba($color-primary-dark, 0.7)
+    ),
+    url(../../public/coffee.jpg); /* linear gradient on top, image on bottom*/
+  background-size: cover; /* tries to fit image in view port height*/
+  background-position: top; /* image stays at top when view port size is changed*/
+  position: relative;
 
   &__title {
     font-size: 3rem;
