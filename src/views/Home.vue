@@ -55,7 +55,6 @@ export default class Home extends Vue {}
 }
 
 .profile {
-  height: 95vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,16 +65,6 @@ export default class Home extends Vue {}
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-
-  background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary-light, 0.1),
-      rgba($color-primary-dark, 0.7)
-    ),
-    url(../../public/coffee.jpg); /* linear gradient on top, image on bottom*/
-  background-size: cover; /* tries to fit image in view port height*/
-  background-position: top; /* image stays at top when view port size is changed*/
-  position: relative;
 
   &__title {
     font-size: 3rem;
