@@ -1,16 +1,21 @@
 <template>
-  <div>
-    <div class="nav">
-      <ul class="nav__list">
-        <router-link tag="li" class="nav__item" to="/">Home</router-link>
-        <div class="nav__item-separator">|</div>
-        <router-link class="nav__item" to="/work">Work</router-link>
-        <div class="nav__item-separator">|</div>
-        <router-link class="nav__item" to="/about">About</router-link>
-      </ul>
-    </div>
+  <div class="main">
+    <div class="main__top">
+      <div class="nav">
+        <ul class="nav__list">
+          <router-link tag="li" class="nav__item" to="/">Home</router-link>
+          <div class="nav__item-separator">|</div>
+          <router-link class="nav__item" to="/work">Work</router-link>
+          <div class="nav__item-separator">|</div>
+          <router-link class="nav__item" to="/about">Skills</router-link>
+        </ul>
+      </div>
 
-    <v-content class="default-layout__main-content">
+      <div class="main__logo">
+        <img src="../public/rm_logo.png" alt="logo" class="main__logo--image" />
+      </div>
+    </div>
+    <v-content class="main__content">
       <transition name="fade" mode="out-in">
         <router-view>
           <Home />
@@ -46,25 +51,44 @@ export default class App extends Vue {
 </script>
 
 <style lang="scss">
-.nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 8rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &__list {
-    display: flex;
-    align-items: center;
+.main {
+  &__top {
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
 
-  &__item {
-    margin: 1rem;
-    list-style-type: none;
-    text-transform: uppercase;
-    cursor: pointer;
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--image {
+      width: 75px;
+      height: 75px;
+    }
+  }
+
+  &__content {
+  }
+
+  .nav {
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__list {
+      display: flex;
+      align-items: center;
+    }
+
+    &__item {
+      margin: 1rem;
+      list-style-type: none;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
   }
 }
 </style>
