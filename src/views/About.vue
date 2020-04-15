@@ -41,7 +41,7 @@
           </li>
 
           <li class="skills__profile-item">
-            Solid grasp of object-orinted programming principles and patterns
+            Solid grasp of object-oriented programming principles and patterns
             using
             <span class="skills__profile--java">Java</span>
           </li>

@@ -14,7 +14,7 @@
             aria-label="Canada Flag"
           ></i
           >. I am a graduate of British Columbia Institute of Technology with a
-          Diploma of Computer System Technlogy. I design and build websites and
+          Diploma of Computer Systems Technlogy. I design and build websites and
           various applications.
         </p>
         <br />
