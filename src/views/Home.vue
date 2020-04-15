@@ -1,69 +1,86 @@
 <template>
-  <div class="profile">
-    <div class="profile__title">
-      Rost <span class="profile__title--last">Myshkin</span>
-    </div>
-    <div class="profile__details">
-      <p>
-        Hi! My name is
-        <span class="profile__details-name">Rost</span> and I am a Full-Stack
-        Developer from Vancouver, BC
-        <i
-          class="em em-flag-ca profile__details-location--icon"
-          aria-role="presentation"
-          aria-label="Canada Flag"
-        ></i
-        >. I am a graduate of British Columbia Institute of Technology with a
-        Diploma of Computer System Technlogy. I design and build websites. You
-        can find me on
-        <span class="profile__details--linkedin"
-          ><a href="https://www.linkedin.com/in/rostmyshkin/">LinkedIn</a></span
-        >.
-      </p>
-
-      <p>
-        Do you need help on a project and want to get in touch?
-        <span class="profile__details--contact"
-          ><a href="mailto: rostmyshkin@gmail.com">Contact Me</a></span
-        >.
-        <i
-          class="em em-rocket profile__details-location--icon"
-          aria-role="presentation"
-          aria-label="Canada Flag"
-        ></i>
-      </p>
-    </div>
+  <div class="application">
+    <header class="profile">
+      <div class="profile__title">
+        Rost <span class="profile__title--last">Myshkin</span>
+      </div>
+      <div class="profile__details">
+        <p>
+          Hi! My name is Rost and I am a Full Stack Software Developer from
+          Vancouver, BC
+          <i
+            class="em em-flag-ca profile__details-location--icon"
+            aria-role="presentation"
+            aria-label="Canada Flag"
+          ></i
+          >. I am a graduate of British Columbia Institute of Technology with a
+          Diploma of Computer Systems Technlogy. I design and build websites and
+          various applications.
+        </p>
+        <br />
+        <p>
+          Do you need help on a project and want to get in touch?
+          <i
+            class="em em-rocket profile__details-location--icon"
+            aria-role="presentation"
+            aria-label="Canada Flag"
+          ></i>
+        </p>
+      </div>
+      <div class="profile__social-links">
+        <div class="profile__social-links-item">
+          <a href="https://www.linkedin.com/in/rostmyshkin/"
+            ><img
+              class="profile__social-links-item--image"
+              height="32"
+              width="32"
+              src="~@/assets/icons/linkedin.svg"
+          /></a>
+        </div>
+        <div class="profile__social-links-item">
+          <a href="https://github.com/rostgoat"
+            ><img
+              class="profile__social-links-item--image"
+              height="32"
+              width="32"
+              src="~@/assets/icons/github.svg"
+          /></a>
+        </div>
+        <div class="profile__social-links-item">
+          <a href="mailto:rostmyshkin@gmail.com"
+            ><img
+              class="profile__social-links-item--image"
+              height="32"
+              width="32"
+              src="~@/assets/icons/gmail.svg"
+          /></a>
+        </div>
+      </div>
+    </header>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-
+import Vue from "vue";
 export default class Home extends Vue {}
 </script>
 
 <style lang="scss">
+.application {
+  height: 100vh;
+}
+
 .profile {
-  width: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  @include center-card;
 
   &__title {
     font-size: 3rem;
     text-transform: uppercase;
-
-    &--last {
-      font-weight: bold;
-      color: #9c3131;
-    }
   }
   &__details {
     padding: 1rem;
@@ -89,21 +106,22 @@ export default class Home extends Vue {}
       }
     }
 
-    &--linkedin {
-      color: #6082f3;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    &--contact {
-      color: #4ec34a;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
     &-item {
       font-weight: 300;
       margin-bottom: 1rem;
+    }
+  }
+
+  &__social-links {
+    display: flex;
+    justify-content: space-between;
+
+    &-item {
+      margin: 1rem;
+
+      &--image {
+        border-radius: 5px;
+      }
     }
   }
 }
