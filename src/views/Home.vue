@@ -31,8 +31,8 @@
       </div>
       <div class="profile__social-links">
         <div class="profile__social-links-item">
-          <a href="https://www.linkedin.com/in/rostmyshkin/"
-            ><img
+          <a href="https://www.linkedin.com/in/rostmyshkin/">
+            <img
               class="profile__social-links-item--image"
               height="32"
               width="32"
@@ -49,8 +49,8 @@
           /></a>
         </div>
         <div class="profile__social-links-item">
-          <a href="mailto:rostmyshkin@gmail.com"
-            ><img
+          <a href="mailto:rostmyshkin@gmail.com">
+            <img
               class="profile__social-links-item--image"
               height="32"
               width="32"
@@ -129,6 +129,8 @@ export default class Home extends Vue {}
 
       &--image {
         border-radius: 5px;
+        filter: invert(98%) sepia(0%) saturate(1283%) hue-rotate(188deg)
+          brightness(81%) contrast(113%);
       }
     }
   }

@@ -12,7 +12,11 @@
       </div>
 
       <div class="main__logo">
-        <img src="../public/rm_logo.png" alt="logo" class="main__logo--image" />
+        <img
+          src="../public/rm_logo_white.png"
+          alt="logo"
+          class="main__logo--image"
+        />
       </div>
     </div>
 
@@ -40,14 +44,14 @@ export default class App extends Vue {}
     top: 0;
     z-index: 1000;
     height: 10rem;
-    background-color: #fafafa;
+    background-color: #181a1b;
   }
 
   &__logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fafafa;
+    background-color: #181a1b;
 
     &--image {
       width: 75px;

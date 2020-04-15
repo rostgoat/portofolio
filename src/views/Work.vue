@@ -32,7 +32,7 @@
           <div class="work__project-links-item">
             <a href="https://github.com/rostgoat/ea-blog-api"
               ><img
-                class="work__projects-links-item--image"
+                class="work__project-links-item--image"
                 height="32"
                 width="32"
                 src="~@/assets/icons/github.svg"
@@ -101,6 +101,8 @@ export default {};
 
         &--image {
           border-radius: 5px;
+          filter: invert(98%) sepia(0%) saturate(1283%) hue-rotate(188deg)
+            brightness(81%) contrast(113%);
         }
 
         &--text {
