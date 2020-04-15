@@ -7,7 +7,7 @@
           <div class="nav__item-separator">|</div>
           <router-link class="nav__item" to="/work">Work</router-link>
           <div class="nav__item-separator">|</div>
-          <router-link class="nav__item" to="/about">Skills</router-link>
+          <router-link class="nav__item" to="/skills">Skills</router-link>
         </ul>
       </div>
 
@@ -15,51 +15,39 @@
         <img src="../public/rm_logo.png" alt="logo" class="main__logo--image" />
       </div>
     </div>
-    <v-content class="main__content">
+
+    <div class="main__content">
       <transition name="fade" mode="out-in">
         <router-view />
       </transition>
-    </v-content>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import Component from "vue-class-component";
-import Home from "@/views/Home.vue";
 
-@Component({
-  components: {
-    Home
-  }
-})
-export default class App extends Vue {
-  onClickHome() {
-    this.$router.push("/");
-  }
-
-  onClickWork() {
-    this.$router.push("/work");
-  }
-
-  onClickAbout() {
-    this.$router.push("/about");
-  }
-}
+@Component
+export default class App extends Vue {}
 </script>
 
 <style lang="scss">
 .main {
   &__top {
     position: fixed;
-    top: 0;
     width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 10rem;
+    background-color: #fafafa;
   }
 
   &__logo {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #fafafa;
 
     &--image {
       width: 75px;
@@ -68,10 +56,10 @@ export default class App extends Vue {
   }
 
   .nav {
-    height: 10rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 10rem;
 
     &__list {
       display: flex;

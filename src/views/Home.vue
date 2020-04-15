@@ -67,7 +67,7 @@ export default class Home extends Vue {}
 
 <style lang="scss">
 .application {
-  height: 100vh;
+  @include center-card;
 }
 
 .profile {
@@ -75,8 +75,8 @@ export default class Home extends Vue {}
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  position: absolute;
-  @include center-card;
+  padding-top: 20rem;
+  width: 80%;
 
   &__title {
     font-size: 3rem;
