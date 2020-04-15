@@ -1,8 +1,10 @@
 <template>
   <div class="application">
     <header class="profile">
-      <div class="profile__title">
-        Rost <span class="profile__title--last">Myshkin</span>
+      <div class="profile__title-container">
+        <div class="profile__title">
+          Rost Myshkin
+        </div>
       </div>
       <div class="profile__details">
         <p>
@@ -79,8 +81,14 @@ export default class Home extends Vue {}
   width: 80%;
 
   &__title {
-    font-size: 3rem;
     text-transform: uppercase;
+    font-size: 2.5rem;
+    &-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
   }
   &__details {
     padding: 1rem;
