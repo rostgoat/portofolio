@@ -17,9 +17,7 @@
     </div>
     <v-content class="main__content">
       <transition name="fade" mode="out-in">
-        <router-view>
-          <Home />
-        </router-view>
+        <router-view />
       </transition>
     </v-content>
   </div>

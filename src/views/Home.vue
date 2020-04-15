@@ -76,11 +76,7 @@ export default class Home extends Vue {}
   justify-content: center;
   flex-wrap: wrap;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  @include center-card;
 
   &__title {
     font-size: 3rem;
