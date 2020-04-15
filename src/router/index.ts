@@ -1,6 +1,6 @@
 import VueRouter from "vue-router";
 
-import routes from "./routes/index";
+import routes from "@/router/routes/index";
 
 export default class CustomRouter extends VueRouter {
   constructor() {
@@ -16,21 +16,5 @@ export default class CustomRouter extends VueRouter {
    */
   initialize() {
     return this;
-  }
-
-  /**
-   * Override to hide duplicate-navigation errors on production.
-   * @override
-   * @param {Object} location
-   */
-  push(location: string) {
-    try {
-      return super.push(location);
-    } catch (e) {
-      if (process.env.NODE_ENV !== "production") {
-        console.warn(e);
-      }
-      throw e;
-    }
   }
 }

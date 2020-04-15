@@ -2,6 +2,8 @@
   <div class="application">
     <div class="skills">
       <div class="skills__profile">
+        <br />
+        <br />
         <div class="skills__profile--title">
           Technical Skills
         </div>
@@ -44,6 +46,26 @@
             Solid grasp of object-oriented programming principles and patterns
             using
             <span class="skills__profile--java">Java</span>
+          </li>
+        </ul>
+        <br />
+        <br />
+        <div class="skills__profile--title">
+          Soft Skills
+        </div>
+        <ul class="skills__profile-list">
+          <li class="skills__profile-item">
+            Self-starter mentality, keen attention to detail and a collaborative
+            mindset
+          </li>
+
+          <li class="skills__profile-item">
+            Great at communicating with stakeholders, developers and upper
+            management
+          </li>
+
+          <li class="skills__profile-item">
+            Passionate about learning and always curious about the how and why
           </li>
         </ul>
       </div>

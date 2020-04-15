@@ -67,9 +67,6 @@ export default class App extends Vue {
     }
   }
 
-  &__content {
-  }
-
   .nav {
     height: 10rem;
     display: flex;
