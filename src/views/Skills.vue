@@ -4,8 +4,10 @@
       <div class="skills__profile">
         <br />
         <br />
-        <div class="skills__profile--title">
-          Technical Skills
+        <div class="skills__profile-title-container">
+          <div class="skills__profile-title">
+            Technical Skills
+          </div>
         </div>
         <ul class="skills__profile-list">
           <li class="skills__profile-item">
@@ -50,8 +52,10 @@
         </ul>
         <br />
         <br />
-        <div class="skills__profile--title">
-          Soft Skills
+        <div class="skills__profile-title-container">
+          <div class="skills__profile-title">
+            Soft Skills
+          </div>
         </div>
         <ul class="skills__profile-list">
           <li class="skills__profile-item">
@@ -81,7 +85,7 @@ export default {};
 </script>
 <style lang="scss">
 .application {
-  height: 100vh;
+  @include center-card;
 }
 
 .skills {
@@ -89,8 +93,9 @@ export default {};
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  position: absolute;
-  @include center-card;
+  padding-top: 15rem;
+  width: 80%;
+  margin-bottom: 2rem;
 
   &__profile {
     &-list {
@@ -100,8 +105,14 @@ export default {};
       margin-top: 0.5rem;
       text-align: justify;
     }
-    &--title {
-      font-weight: bold;
+
+    &-title {
+      &-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
     }
     &--vue {
       color: #41b883;

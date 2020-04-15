@@ -1,6 +1,6 @@
 import Home from "../../views/Home.vue";
 import Work from "../../views/Work.vue";
-import About from "../../views/About.vue";
+import Skills from "../../views/Skills.vue";
 
 export default [
   {
@@ -14,8 +14,8 @@ export default [
     component: Work
   },
   {
-    path: "/about",
-    name: "about",
-    component: About
+    path: "/skills",
+    name: "skills",
+    component: Skills
   }
 ];

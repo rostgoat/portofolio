@@ -13,6 +13,7 @@
               <img
                 class="work__projects-links-item--image"
                 src="../../public/project_1_game_bible_logo.png"
+                width="150"
               />
             </a>
           </div>
@@ -24,6 +25,7 @@
               blog posts, upload images and like other users' posts. Click on
               the post to view it live!</a
             >
+            <br />
           </div>
         </div>
         <div class="work__project-links">
@@ -48,7 +50,7 @@ export default {};
 
 <style lang="scss">
 .application {
-  height: 100vh;
+  @include center-card;
 }
 
 .work {
@@ -56,9 +58,16 @@ export default {};
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  position: absolute;
-  @include center-card;
+  padding-top: 20rem;
+  width: 80%;
 
+  &__logo {
+    @media only screen and (max-width: 600px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
   &__project {
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -75,6 +84,11 @@ export default {};
       display: flex;
       margin: 0.5rem;
       padding: 0.5rem;
+
+      @media only screen and (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+      }
     }
 
     &-links {
